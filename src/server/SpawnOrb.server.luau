@@ -20,7 +20,7 @@ function spawnOrb()
         local character = hit.Parent
         local player = character:FindFirstChild('Humanoid') :: Humanoid
 
-        if player then player.WalkSpeed += 2 end
+        if player then player.WalkSpeed += math.random(0.5, 2) end
 
         orb:Destroy()
         touched = true
