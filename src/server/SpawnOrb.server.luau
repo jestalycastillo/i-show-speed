@@ -18,9 +18,15 @@ function spawnOrb()
     part.Touched:Connect(function (hit)
         if touched then return end
         local character = hit.Parent
+        local me = players:GetPlayerFromCharacter(character)
         local player = character:FindFirstChild('Humanoid') :: Humanoid
-
-        if player then player.WalkSpeed += math.random(0.5, 2) end
+        
+        if player then
+            local randomSpeed = math.random(0.5, 2)
+            player.WalkSpeed += randomSpeed
+            local speed = me.leaderstats.Speed :: IntValue
+            speed.Value += randomSpeed
+        end
 
         orb:Destroy()
         touched = true
