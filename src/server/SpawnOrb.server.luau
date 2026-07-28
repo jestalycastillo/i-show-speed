@@ -22,7 +22,7 @@ function spawnOrb()
         local player = character:FindFirstChild('Humanoid') :: Humanoid
         
         if player then
-            local randomSpeed = math.random(0.5, 2)
+            local randomSpeed = math.random(1, 3)
             player.WalkSpeed += randomSpeed
             local speed = me.leaderstats.Speed :: IntValue
             speed.Value += randomSpeed

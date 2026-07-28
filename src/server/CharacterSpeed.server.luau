@@ -1,10 +1,9 @@
-local players = game:GetService('Players')
+-- local players = game:GetService('Players')
 
-players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        local humanoid = character:WaitForChild('Humanoid') :: Humanoid
+-- players.PlayerAdded:Connect(function(player)
+--     player.CharacterAdded:Connect(function(character)
+--         local humanoid = character:WaitForChild('Humanoid') :: Humanoid
 
-        humanoid.WalkSpeed -= 15
-        print(humanoid.WalkSpeed)
-    end)
-end)
+--         humanoid.WalkSpeed -= 15
+--     end)
+-- end)
