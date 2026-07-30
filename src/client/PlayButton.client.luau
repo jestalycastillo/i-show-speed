@@ -6,7 +6,7 @@ local player = players.LocalPlayer
 local playerGui = player:WaitForChild('PlayerGui')
 
 local screenGui = playerGui:WaitForChild('ScreenGui') :: ScreenGui
-local playButton = playerGui:WaitForChild('ScreenGui'):WaitForChild('Frame'):WaitForChild('TextButton') :: TextButton
+local playButton = screenGui:WaitForChild('Frame'):WaitForChild('TextButton') :: TextButton
 
 playButton.MouseEnter:Connect(function()
 	playButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
